@@ -1,7 +1,13 @@
-import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <div>App</div>;
+  console.log(import.meta.env.VITE_API_KEY);
+
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
