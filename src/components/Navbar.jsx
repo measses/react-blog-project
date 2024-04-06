@@ -6,14 +6,12 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="px-8 py-4">
+      <nav className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-950 text-white">
         <div className="flex justify-between items-center">
-          <span className="text-4xl font-extrabold text-indigo-600">
-            blogyX
-          </span>
+          <span className="text-4xl font-extrabold">blogyX</span>
           <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg
-              className="h-20 w-8"
+              className="h-8 w-8"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -28,11 +26,10 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "flex" : "hidden"
-          } lg:flex flex-col lg:flex-row lg:items-center h-screen lg:h-auto`}
+          } lg:flex flex-col lg:flex-row lg:items-center h-screen lg:h-auto transition-all duration-500 ease-in-out`}
         >
-          <ul className="flex flex-col lg:flex-row sm:space-x-4 md:space-x-8 lg:space-x-14 sm:mb-0 mx-auto max-w-3/4 md:max-w-2/4 lg:max-w-1/2">
+          <ul className="flex flex-col lg:flex-row sm:space-x-4 md:space-x-8 lg:space-x-14 sm:mb-0 mx-auto">
             {[
-              "Kategoriler -->",
               "Teknoloji",
               "Yazılım",
               "Sanat",
@@ -43,12 +40,9 @@ function Navbar() {
             ].map((category, index) => (
               <li
                 key={index}
-                className="border rounded px-4 py-2 hover:border-indigo-500 transition-colors bg-slate-100 my-2 sm:my-0"
+                className="border border-gray-200 rounded px-4 py-2 hover:bg-indigo-500 hover:text-white transition-colors duration-300 my-2 sm:my-0"
               >
-                <a
-                  href="#"
-                  className="font-medium text-gray-600 hover:text-indigo-500"
-                >
+                <a href="#" className="font-medium">
                   {category}
                 </a>
               </li>
