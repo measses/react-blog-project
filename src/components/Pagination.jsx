@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         className={`p-2 rounded-md ${
           currentPage === 1
             ? "cursor-not-allowed text-gray-500 bg-gray-200"
-            : "hover:bg-gray-100 text-gray-700"
+            : "hover:bg-gray-100 text-gray-400"
         } transition duration-150 ease-in-out`}
       >
         <BsArrowLeftSquare size={32} />
@@ -25,7 +25,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         className={`p-2 rounded-md ${
           currentPage === totalPages
             ? "cursor-not-allowed text-gray-500 bg-gray-200"
-            : "hover:bg-gray-100 text-gray-700"
+            : "hover:bg-gray-100 text-gray-400"
         } transition duration-150 ease-in-out`}
       >
         <BsArrowRightSquare size={32} />
