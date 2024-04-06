@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { BlogContext } from "./BlogContext";
+import { BlogContext } from "../context/BlogContext";
 
 function BlogDetail() {
   const { id } = useParams();
