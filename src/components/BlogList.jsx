@@ -16,17 +16,16 @@ function BlogList() {
   const currentBlogs = blogs.slice(indexOfFirstPost, indexOfLastPost);
 
   const fetchBlogList = async () => {
-    
     setLoading(true);
     try {
-      const response = await fetch("https://blog-post-508y.onrender.com/blog");
+      const response = await fetch(import.meta.env.VITE_API_KEY);
       if (!response.ok) throw new Error("Network response was not ok");
       const data = await response.json();
       setBlogs(data);
-      setLoading(false); 
+      setLoading(false);
     } catch (error) {
       console.error("Fetch error: ", error);
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
