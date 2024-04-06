@@ -1,0 +1,21 @@
+#root{
+    background: rgb(2,0,36);
+    background: linear-gradient(63deg, rgba(2,0,36,1) 24%, rgba(66,65,83,1) 84%);
+}
+
+.custom-gradient-bg {
+    background: rgb(2,0,36);
+    background: linear-gradient(63deg, rgba(2,0,36,1) 24%, rgba(66,65,83,1) 84%);
+  }
+
+
+  .custom-btn-bg{
+    background: rgb(0,9,36);
+    background: linear-gradient(63deg, rgba(0,9,36,1) 9%, rgba(90,102,158,1) 100%);
+    border-radius: 10px;
+}
+
+.custom-btn-bg:hover{
+    background: rgb(0,9,36);
+    background: linear-gradient(63deg, rgba(0,9,36,1) 19%, rgba(39,49,88,1) 98%);
+}
