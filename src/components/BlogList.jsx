@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
+import { useCategory } from "../context/CategoryContext";
+
 function BlogList() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+
+  const { selectedCategory } = useCategory();
+
   const postsPerPage = 10;
   const totalPages = Math.ceil(blogs.length / postsPerPage);
 
@@ -28,6 +33,27 @@ function BlogList() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(import.meta.env.VITE_API_KEY)
+      .then((response) => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then((data) => {
+        if (selectedCategory) {
+          const filteredData = data.filter(
+            (blog) => blog.category === selectedCategory
+          );
+          setBlogs(filteredData);
+        } else {
+          setBlogs(data);
+        }
+      })
+      .catch((error) => console.error("Fetch error:", error))
+      .finally(() => setLoading(false));
+  }, [selectedCategory]);
 
   useEffect(() => {
     fetchBlogList();
