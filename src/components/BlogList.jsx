@@ -24,12 +24,14 @@ function BlogList() {
       {blogs.map((blog, index) => (
         <div
           key={index}
-          className="flex flex-col w-full sm:w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
+          className="relative flex flex-col w-full sm:w-64 border border-gray-700 rounded-lg shadow overflow-hidden dark:border-gray-600"
         >
-          <a href="#">
+          <div className="custom-gradient-bg absolute inset-0 z-0"></div>{" "}
+          {/* Arka plan için */}
+          <a href="#" className="z-10">
             <img className="w-full h-48 object-cover" src={blog.photo} alt="" />
           </a>
-          <div className="p-4 flex flex-col flex-grow">
+          <div className="p-4 flex flex-col flex-grow z-10">
             <a href="#">
               <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                 {blog.title}
@@ -51,7 +53,7 @@ function BlogList() {
 
             <a
               href="#"
-              className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-auto"
+              className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white custom-btn-bg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-auto"
             >
               Daha Fazla
               <svg
