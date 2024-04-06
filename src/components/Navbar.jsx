@@ -8,7 +8,9 @@ function Navbar() {
     <div>
       <nav className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-950 text-white">
         <div className="flex justify-between items-center">
-          <span className="text-4xl font-extrabold">blogyX</span>
+          <a href="/">
+            <span className="text-4xl font-extrabold">blogyX</span>
+          </a>
           <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg
               className="h-8 w-8"
