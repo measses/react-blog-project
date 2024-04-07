@@ -52,6 +52,9 @@ function BlogList() {
       .catch((error) => console.error("Fetch error:", error))
       .finally(() => setLoading(false));
   }, [selectedCategory]);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory]);
 
   if (loading) {
     return (
