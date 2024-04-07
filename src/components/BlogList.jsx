@@ -7,7 +7,6 @@ function BlogList() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const { categoryName } = useParams();
   const { selectedCategory } = useCategory();
   const postsPerPage = 10;
   const totalPages = Math.ceil(blogs.length / postsPerPage);
@@ -53,10 +52,6 @@ function BlogList() {
       .catch((error) => console.error("Fetch error:", error))
       .finally(() => setLoading(false));
   }, [selectedCategory]);
-
-  useEffect(() => {
-    fetchBlogList();
-  }, []);
 
   if (loading) {
     return (
