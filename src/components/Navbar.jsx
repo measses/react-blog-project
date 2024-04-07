@@ -4,7 +4,12 @@ import { useCategory } from "../context/CategoryContext";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { setSelectedCategory } = useCategory(); // Context'ten setSelectedCategory fonksiyonunu kullan
+  const { setSelectedCategory } = useCategory();
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setIsOpen(false);
+  };
 
   return (
     <div>
@@ -45,7 +50,7 @@ function Navbar() {
               <li
                 key={index}
                 className="border border-gray-200 rounded px-4 py-2 hover:bg-indigo-500 hover:text-white transition-colors duration-300 my-2 sm:my-0"
-                onClick={() => setSelectedCategory(category)} // setSelectedCategory ile kategori seç
+                onClick={() => handleCategoryClick(category)}
               >
                 <a href="#" className="font-medium">
                   {category}

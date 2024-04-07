@@ -99,13 +99,13 @@ function BlogList() {
           onPageChange={onPageChange}
         />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center mt-8 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center mt-8 mb-4 ml-2">
         {currentBlogs.map((blog, index) => (
           <div
             key={index}
             className="relative flex flex-col w-3/4 sm:w-64 md:w-60 lg:w-70 xl:w-full border border-gray-700 rounded-lg shadow overflow-hidden dark:border-gray-600"
           >
-            <div className="custom-gradient-bg absolute inset-0 z-0"></div>{" "}
+            <div className="custom-gradient-bg absolute inset-0 z-0"></div>
             <div href="#" className="z-10">
               <img
                 className="w-full h-48 object-cover"
