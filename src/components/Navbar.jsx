@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../assets/css/Navbar.css";
 import { Link } from "react-router-dom";
 import { useCategory } from "../context/CategoryContext";
+import { FaGithub } from "react-icons/fa";
+import { CiCoffeeCup } from "react-icons/ci";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +21,22 @@ function Navbar() {
           <a href="/">
             <span className="text-4xl font-extrabold">blogyX</span>
           </a>
+          <div className="flex justify-center items-center space-x-2">
+            <a
+              href="https://github.com/measses"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="text-3xl text-white" />
+            </a>
+            <a
+              href="https://www.buymeacoffee.com/mertaraz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CiCoffeeCup className="text-3xl text-white" />
+            </a>
+          </div>
           <button
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
