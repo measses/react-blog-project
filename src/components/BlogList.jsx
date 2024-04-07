@@ -103,7 +103,7 @@ function BlogList() {
         {currentBlogs.map((blog, index) => (
           <div
             key={index}
-            className="relative flex flex-col w-full sm:w-64 border border-gray-700 rounded-lg shadow overflow-hidden dark:border-gray-600"
+            className="relative flex flex-col w-3/4 sm:w-64 md:w-60 lg:w-70 xl:w-full border border-gray-700 rounded-lg shadow overflow-hidden dark:border-gray-600"
           >
             <div className="custom-gradient-bg absolute inset-0 z-0"></div>{" "}
             <div href="#" className="z-10">
