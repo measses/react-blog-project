@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiCoffeeCup } from "react-icons/ci";
+import { MdPersonAddAlt1 } from "react-icons/md";
 
 function Footer() {
   return (
@@ -21,8 +22,15 @@ function Footer() {
         >
           <CiCoffeeCup className="text-3xl text-white" />
         </a>
+        <a
+          href="https://bento.me/mertaraz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MdPersonAddAlt1 className="text-3xl text-white" />
+        </a>
       </div>
-      <p>&copy; 2024 blogyX -- Mert Araz</p>
+      <p className="mt-2">&copy; 2024 blogyX -- Mert Araz</p>
     </footer>
   );
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useCategory } from "../context/CategoryContext";
 import { FaGithub } from "react-icons/fa";
 import { CiCoffeeCup } from "react-icons/ci";
+import { MdPersonAddAlt1 } from "react-icons/md";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ function Navbar() {
           <a href="/">
             <span className="text-4xl font-extrabold">blogyX</span>
           </a>
-          <div className="flex justify-center items-center space-x-2">
+          <div className="flex justify-center items-center space-x-2 mr-6 mt-2">
             <a
               href="https://github.com/measses"
               target="_blank"
@@ -36,11 +37,27 @@ function Navbar() {
             >
               <CiCoffeeCup className="text-3xl text-white" />
             </a>
+            <a
+              href="https://bento.me/mertaraz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MdPersonAddAlt1 className="text-3xl text-white" />
+            </a>
           </div>
-          <button
-            className="lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          ></button>
+          <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+            <svg
+              className="h-8 w-8"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
         <div
           className={`${
