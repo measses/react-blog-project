@@ -12,7 +12,7 @@ function BlogDetail() {
   }
 
   return (
-    <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+    <main className="pt-8 pb-16 lg:pt-16 lg:pb-24  dark:bg-gray-900 antialiased">
       <div className="flex flex-col justify-between px-4 mx-auto max-w-screen-xl ">
         <article className="w-full max-w-2xl mx-auto">
           <header className="mb-4 lg:mb-6">
@@ -27,14 +27,14 @@ function BlogDetail() {
                   href="https://github.com/measses"
                   target="_blank"
                   rel="author"
-                  className="text-xl font-bold text-gray-900 dark:text-white"
+                  className="text-xl font-bold text-gray-300 dark:text-white"
                 >
                   Mert Araz
                 </a>
-                <p className="text-base text-gray-500 dark:text-gray-400">
+                <p className="text-base text-gray-500 dark:text-gray-300">
                   Junior Frontend Developer
                 </p>
-                <p className="text-base text-gray-500 dark:text-gray-400">
+                <p className="text-base text-gray-500 dark:text-gray-300">
                   <time
                     pubdate="true"
                     dateTime="2024-04-06"
@@ -47,7 +47,7 @@ function BlogDetail() {
             </address>
             <div className="flex justify-center"></div>
 
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-200 lg:mb-6 lg:text-4xl dark:text-white">
               {blog.title}
             </h1>
             <img

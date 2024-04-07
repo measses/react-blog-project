@@ -112,11 +112,11 @@ function BlogList() {
             </div>
             <div className="p-4 flex flex-col flex-grow z-10">
               <a href="#">
-                <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   {blog.title}
                 </h5>
               </a>
-              <p className="mb-3 flex-grow text-sm font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 flex-grow text-sm font-normal text-gray-300 dark:text-gray-300">
                 {blog.content.split(" ").slice(0, 25).join(" ")}...
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
