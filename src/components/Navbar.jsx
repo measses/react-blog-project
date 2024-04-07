@@ -1,5 +1,7 @@
+// Navbar.jsx
 import React, { useState } from "react";
 import "../assets/css/Navbar.css";
+import { Link } from "react-router-dom";
 import { useCategory } from "../context/CategoryContext";
 
 function Navbar() {
@@ -18,19 +20,10 @@ function Navbar() {
           <a href="/">
             <span className="text-4xl font-extrabold">blogyX</span>
           </a>
-          <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-            <svg
-              className="h-8 w-8"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
+          <button
+            className="lg:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          ></button>
         </div>
         <div
           className={`${
@@ -52,9 +45,9 @@ function Navbar() {
                 className="border border-gray-200 rounded px-4 py-2 hover:bg-indigo-500 hover:text-white transition-colors duration-300 my-2 sm:my-0"
                 onClick={() => handleCategoryClick(category)}
               >
-                <a href="#" className="font-medium">
+                <Link to={`/?category=${category}`} className="font-medium">
                   {category}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

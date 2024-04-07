@@ -1,15 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useCategory } from "../context/CategoryContext";
 
 function BlogList() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-
+  const { categoryName } = useParams();
   const { selectedCategory } = useCategory();
-
   const postsPerPage = 10;
   const totalPages = Math.ceil(blogs.length / postsPerPage);
 
@@ -135,7 +134,7 @@ function BlogList() {
 
               <Link
                 to={`/blog/${blog.id}`}
-                className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white custom-btn-bg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-auto"
+                className="inline-flex justify-center items-center w-full px-3 py-2 text-xs font-medium text-center text-white custom-btn-bg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-auto"
               >
                 Daha Fazla
                 <svg

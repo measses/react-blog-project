@@ -8,7 +8,7 @@ function BlogDetail() {
   const blog = blogs.find((blog) => blog.id.toString() === id);
 
   if (!blog) {
-    return <div className="text-white">Blog bulunamadı!</div>;
+    return <div className="text-white text-xl">Blog bulunamadı!</div>;
   }
 
   return (
